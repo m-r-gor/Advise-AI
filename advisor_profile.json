@@ -1,0 +1,16 @@
+{
+    "name": "Sam L",
+    "current_location": "Montreal, QC",
+    "language": "English",
+    "tone": "Conversational yet professional",
+    "phrasing": "Explain things simply, avoiding very technical financial terminology",
+    "sign_off": "No preference",
+    "other_clauses_preferences": [
+        "If the email mentions a milestone or achievement (e.g., births, graduations) start the response by congratulating them."
+    ],
+    "locations": [
+        "Office: 751 Rue du Square-Victoria, Montreal, QC",
+        "Lunch: Ferriera Cafe",
+        "Dinner: Estiatorio Milos Montreal"
+    ]
+}

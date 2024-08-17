@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile</title>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #121212;
+            color: #dcdcdc;
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 10px;
+            background: #1e1e2f;
+            border-radius: 10px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+        }
+        .header {
+            text-align: center;
+            background: #141E4F;
+            padding: 15px;
+            border-radius: 10px 10px 0 0;
+        }
+        h1 {
+            font-size: 24px;
+            color: #87a0ff;
+            margin: 10px 0;
+        }
+        .content {
+            padding: 15px;
+        }
+        .field {
+            display: flex;
+            align-items: flex-start;
+            margin: 15px 0;
+        }
+        .field strong {
+            width: 180px;
+            text-align: left;
+            margin-right: 15px;
+        }
+        .value {
+            display: block;
+            padding: 8px;
+            background: #3e3e4e;
+            border-radius: 12px;
+            color: #dcdcdc;
+            flex-grow: 1;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-size: 13px;
+        }
+        .field-clauses {
+            margin: 15px 0;
+        }
+        .field-clauses strong {
+            display: block;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            background: #3e3e4e;
+            margin: 5px 0;
+            padding: 8px;
+            border-radius: 12px;
+            font-style: italic;
+            font-size: 13px;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #87a0ff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 14px;
+        }
+        a:hover {
+            background: #6e8be7;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Advisor Profile</h1>
+        </div>
+        <div class="content">
+            <div class="field"><strong>Name:</strong> <span class="value">{{ profile.name }}</span></div>
+            <div class="field"><strong>Language:</strong> <span class="value">{{ profile.language }}</span></div>
+            <div class="field"><strong>Tone:</strong> <span class="value">{{ profile.tone }}</span></div>
+            <div class="field"><strong>Phrasing:</strong> <span class="value">{{ profile.phrasing }}</span></div>
+            <div class="field"><strong>Sign Off:</strong> <span class="value">{{ profile.sign_off }}</span></div>
+            <div class="field-clauses">
+                <strong>Locations:</strong>
+                <ul>
+                    {% for location in profile.locations %}
+                        <li>{{ location }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="field-clauses">
+                <strong>Other Preferences:</strong>
+                <ul>
+                    <li>{{ profile.other_preferences }}</li>
+                </ul>
+            </div>
+            <a href="{{ url_for('edit_profile') }}">Edit Profile</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Profile</title>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #121212;
+            color: #dcdcdc;
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 10px;
+            background: #1e1e2f;
+            border-radius: 10px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+        } 
+        .header {
+            text-align: center;
+            background: #141E4F;
+            padding: 15px;
+            border-radius: 10px 10px 0 0;
+        }
+        h1 {
+            font-size: 24px;
+            color: #87a0ff;
+            margin: 10px 0;
+        }
+        .content {
+            padding: 15px;
+        }
+        .field {
+            display: flex;
+            align-items: flex-start;
+            margin: 15px 0;
+        }
+        .field strong {
+            width: 180px;
+            text-align: left;
+            margin-right: 15px;
+        }
+        .value {
+            display: block;
+            padding: 8px;
+            background: #3e3e4e;
+            border-radius: 12px;
+            color: #dcdcdc;
+            flex-grow: 1;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-size: 13px;
+        }
+        .field-clauses {
+            margin: 15px 0;
+            width: 100%;
+        }
+        .field-clauses strong {
+            display: block;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+        textarea {
+            width: 100%;
+            padding: 8px;
+            background: #3e3e4e;
+            border: none;
+            border-radius: 12px;
+            color: #dcdcdc;
+            font-size: 13px;
+            box-sizing: border-box;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            background: #3e3e4e;
+            margin: 5px 0;
+            padding: 8px;
+            border-radius: 12px;
+            font-style: italic;
+            font-size: 13px;
+        }
+        a.button, button.button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #87a0ff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+        }
+        a.button:hover, button.button:hover {
+            background: #6e8be7;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Edit Profile</h1>
+        </div>
+        <div class="content">
+            <form method="POST">
+                <div class="field"><strong>Name:</strong> <input type="text" id="name" name="name" value="{{ profile.name }}" class="value"></div>
+                <div class="field"><strong>Language:</strong> <input type="text" id="language" name="language" value="{{ profile.language }}" class="value"></div>
+                <div class="field"><strong>Tone:</strong> <input type="text" id="tone" name="tone" value="{{ profile.tone }}" class="value"></div>
+                <div class="field"><strong>Phrasing:</strong> <input type="text" id="phrasing" name="phrasing" value="{{ profile.phrasing }}" class="value"></div>
+                <div class="field"><strong>Sign Off:</strong> <input type="text" id="sign_off" name="sign_off" value="{{ profile.sign_off }}" class="value"></div>
+                <div class="field-clauses">
+                    <strong>Locations (enter each location on a new line):</strong>
+                    <textarea id="locations" name="locations" rows="5" class="value">{{ '\n'.join(profile.locations) }}</textarea>
+                </div>
+                <div class="field-clauses">
+                    <strong>Other Preferences:</strong>
+                    <textarea id="other_preferences" name="other_preferences" rows="5" class="value">{{ profile.other_preferences }}</textarea>
+                </div>
+                <button type="submit" class="button">Save and Go Back to Profile</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
