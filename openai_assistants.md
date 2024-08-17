@@ -1,4 +1,4 @@
-**Below are instructions/settings for all the OpenAI Assistants used.**
+**Below are instructions/settings for all OpenAI Assistants used.**
 
 ---
 
