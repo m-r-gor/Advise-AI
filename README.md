@@ -7,9 +7,7 @@ For demo purposes, the script is currently hosted and running as an *always-on t
 
 # OpenAI Assistants API
 
-All LLM processing is done via the [Assistants API](https://platform.openai.com/docs/assistants/overview). I created a total of 28 assistants with different instructions, docs, and settings on the OpenAI Assistants platform. They exist on my OpenAI account.
-
-Below is a depiction of the main LLM sequence that generates content in response to a client email. Each rectangle in the chart represents an instance of ChatGPT 4o.
+All LLM processing is done via the [Assistants API](https://platform.openai.com/docs/assistants/overview). I created a total of 28 assistants with different instructions, docs, and settings on the OpenAI Assistants platform. Below is a depiction of the main LLM sequence that generates content in response to a client email. Each rectangle in the chart represents an instance of ChatGPT 4o:
 
 ```mermaid
 graph TD
