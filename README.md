@@ -53,7 +53,7 @@ graph TD
 # Other Necessary APIs/Services
 
 The project also relies on:
-- **Calendly API:** fetches availability from advisor's google calendar
+- **Calendly API:** fetches availability from advisor's Google Calendar
 - **Google Calendar API:** schedules events in advisor's calendar
 - **Google Maps API:** determines address of restaurants in advisor's profile and calculates live driving time
 - **Siteground:** Hosting provider for [commands list site](https://wealth-ai.xyz/commands-list/) and [demo info page](https://wealth-ai.xyz/info/)
