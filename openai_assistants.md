@@ -11,6 +11,7 @@ You will be provided with an email that a Canadian financial advisor received fr
 ---  
 
 **determine_elements**  
+
 Instructions:  
 ```
 You will be provided with an email a financial advisor received from a client. I have provided some elements of context below. If any of these elements are highly necessary in order to reply to the email, output necessary elements separated by commas with no further commentary. If none are needed, output "None".
