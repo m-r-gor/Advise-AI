@@ -1,7 +1,7 @@
 # Advise AI
 Advise AI is an email-based assistant designed to help financial advisors serve their clients more effectively. By forwarding a client's email to Advise AI, the advisor receives a response with relevant content tailored to the client's inquiry.
 
-The assistant.py script uses the Microsoft Graph API to authenticate and access the Outlook account, processes the email content using numerous ChatGPT instances, and then uses SendGrid's API to send the generated content to the advisor. The script continuously runs, automatically processing any unread emails in the inbox.
+The *assistant.py* script uses the Microsoft Graph API to authenticate and access the Outlook account, processes the email content using numerous ChatGPT instances, and then uses SendGrid's API to send the generated content to the advisor. The script continuously runs, automatically processing any unread emails in the inbox.
 
 For demo purposes, the script is currently hosted and running as an always-on task on PythonAnywhere.com.
 
