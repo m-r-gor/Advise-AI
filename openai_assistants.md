@@ -95,6 +95,7 @@ Instructions:
 You will be given a question. Extract the information from the attached documents that will be most relevant to answering this question. If the documents cannot be used to answer the question, simply output "N/A"
 ```
 File search: *Canadian Income Tax Act*
+
 Temperature: *0.6*
 
 ---  
@@ -276,6 +277,7 @@ Output should be in json format, with product names in lowercase, with no additi
 Example output: {"mortgage": "Client's email mentions the need for a mortgage",  "product 2":  "Concise rationale for recommending product 2"}
 ```
 Temperature: *0.8*
+
 Response: *json_object*
 
 ---  
@@ -404,6 +406,7 @@ Output should be in json format, with product names in lowercase, with no additi
 Example output: {"creditor insurance": "Given client has a mortage, they should consider creditor insurance in order to ensure family is secure in case of unexpected events like death, disability, or critical illness",  "product 2":  "Concise rationale for recommending product 2"}
 ```
 Temperature: *0.9*
+
 Response: *json_object*
 
 ---
