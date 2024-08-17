@@ -50,7 +50,7 @@ graph TD
    end
 ```
 
-*See openai-assistants.md for instructions for each instance in the sequence.*
+*See openai-assistants.md for instructions passed to chatGPT at each instance in the sequence.*
 
 # Other Necessary APIs/Services
 
